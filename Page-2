@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basis-Data-Page-2</title>
+    <link rel="icon" href="ubp.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html"> page 1</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h1>1. Entity</h1>
+      <pre>
+Entity atau Entitas adalah objek utama yang ingin kamu simpan datanya di database.
+Biasanya berupa benda, orang, tempat, atau hal yang bisa diidentifikasi
+Contoh: Pelanggan, Produk, Transaksi
+        </pre
+      >
+      <table>
+        <caption>
+          Tabel Contoh Entitas
+        </caption>
+        <thead>
+          <tr>
+            <th>Entitas</th>
+            <th>Contoh Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pelanggan</td>
+            <td>Rendy, Budi, Sinta</td>
+          </tr>
+          <tr>
+            <td>Produk</td>
+            <td>Laptop, HP, Keyboard</td>
+          </tr>
+          <tr>
+            <td>Transaksi</td>
+            <td>#TR001, #TR002, #TR003</td>
+          </tr>
+        </tbody>
+      </table>
+      <h1>2. Atribut</h1>
+      <pre>
+Atribut adalah ciri-ciri atau informasi yang menjelaskan entitas.
+Entitas Pelanggan punya atribut,
+seperti: ID_Pelanggan, Nama, Alamat, No_Telp.
+Jadi, atribut adalah kolom atau field yang menggambarkan data suatu entitas.
+      </pre>
+      <h1>3. Relasi (Relation)</h1>
+      <pre>
+Relasi adalah hubungan antara dua atau lebih entitas
+Contoh:
+Pelanggan melakukan Transaksi.
+Produk terlibat dalam Transaksi.
+Relasi menggambarkan bagaimana data antar entitas saling berhubungan.
+      </pre>
+      <a
+        href="https://youtu.be/ZHuEei0YU4Q?si=yQ9VkNSNtdQjrT3a"
+        class="btn"
+        target="_self"
+        >Cara install DBMS (Mysql)</a
+      >
+    </main>
+  </body>
+</html>
