@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Blog-Pertemuan-3</title>
+  </head>
+  <body>
+    <header>
+      <h1>Blog ERD</h1>
+      <p>Memahami konsep dasar dalam Entity Relationship Diagram</p>
+    </header>
+    <main>
+      <article class="post">
+        <h2>1.Primary Key</h2>
+        <p>
+          <b>Primary Key</b> adalah atribut unik yang menjadi identitas utama
+          dari suatu entitas. Setiap entitas hanya memiliki satu primary key.
+        </p>
+        <ul>
+          <li>ID_Mahasiswa pada tabel Mahasiswa</li>
+          <li>ID_Dosen pada tabel Dosen</li>
+          <li>ID_Transaksi pada tabel Penjualan</li>
+          <li>No_Pegawai pada tabel Pegawai</li>
+          <li>ID_Obat pada tabel Obat</li>
+        </ul>
+        <h2>2.Foreign Key</h2>
+        <p>
+          <b>Foreign Key</b> adalah atribut yang menjadi penghubung antar tabel.
+          Foreign key mengacu pada primary key di tabel lain.
+        </p>
+        <ul>
+          <li>ID_Dosen di tabel Mahasiswa (mengacu ke tabel Dosen)</li>
+          <li>ID_Pelanggan di tabel Transaksi</li>
+          <li>ID_Supplier di tabel Obat</li>
+          <li>ID_Kelas di tabel Mahasiswa</li>
+          <li>ID_Produk di tabel Penjualan</li>
+        </ul>
+        <h2>3.Candidate Key</h2>
+        <p>
+          <b>Candidate Key</b> adalah atribut yang berpotensi menjadi primary
+          key karena memiliki nilai unik.
+        </p>
+        <ul>
+          <li>NIM dan Email pada tabel Mahasiswa</li>
+          <li>NIP dan Nomor Telepon pada tabel Dosen</li>
+          <li>No_Transaksi dan Kode_Nota pada tabel Transaksi</li>
+          <li>No_KTP dan Email pada tabel Pegawai</li>
+          <li>Kode_Obat dan Nama_Obat pada tabel Obat</li>
+        </ul>
+      </article>
+
+      <article class="post">
+        <h2>
+          Post 2: Apa itu Relation pada ERD dan Mengapa Many-to-Many Tidak Baik?
+        </h2>
+        <p>
+          <b>Relation</b> pada ERD adalah hubungan antar entitas yang
+          menggambarkan bagaimana data saling terhubung. Hubungan ini dapat
+          berupa:
+        </p>
+        <ul>
+          <li>One-to-One (1:1)</li>
+          <li>One-to-Many (1:N)</li>
+          <li>Many-to-Many (M:N)</li>
+        </ul>
+
+        <p>
+          <b>Many-to-Many</b> tidak baik digunakan langsung dalam ERD karena
+          menyebabkan duplikasi data dan kesulitan dalam implementasi. Solusinya
+          adalah membuat tabel penghubung (junction table) agar relasi menjadi
+          dua relasi One-to-Many
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Blog ERD by Rendy</p>
+    </footer>
+  </body>
+</html>
