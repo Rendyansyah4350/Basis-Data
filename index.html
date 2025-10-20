@@ -3,70 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Basis-Data-Page-2</title>
-    <link rel="icon" href="ubp.png" />
     <link rel="stylesheet" href="style.css" />
+    <title>Blog-Pertemuan-4</title>
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="index.html"> page 1</a></li>
-      </ul>
-    </nav>
+    <header>
+      <h1>Blog ERD</h1>
+      <p>Apa itu normalisasi pada ERD</p>
+    </header>
     <main>
-      <h1>1. Entity</h1>
-      <pre>
-Entity atau Entitas adalah objek utama yang ingin kamu simpan datanya di database.
-Biasanya berupa benda, orang, tempat, atau hal yang bisa diidentifikasi
-Contoh: Pelanggan, Produk, Transaksi
-        </pre
-      >
-      <table>
-        <caption>
-          Tabel Contoh Entitas
-        </caption>
-        <thead>
-          <tr>
-            <th>Entitas</th>
-            <th>Contoh Data</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Pelanggan</td>
-            <td>Rendy, Budi, Sinta</td>
-          </tr>
-          <tr>
-            <td>Produk</td>
-            <td>Laptop, HP, Keyboard</td>
-          </tr>
-          <tr>
-            <td>Transaksi</td>
-            <td>#TR001, #TR002, #TR003</td>
-          </tr>
-        </tbody>
-      </table>
-      <h1>2. Atribut</h1>
-      <pre>
-Atribut adalah ciri-ciri atau informasi yang menjelaskan entitas.
-Entitas Pelanggan punya atribut,
-seperti: ID_Pelanggan, Nama, Alamat, No_Telp.
-Jadi, atribut adalah kolom atau field yang menggambarkan data suatu entitas.
-      </pre>
-      <h1>3. Relasi (Relation)</h1>
-      <pre>
-Relasi adalah hubungan antara dua atau lebih entitas
-Contoh:
-Pelanggan melakukan Transaksi.
-Produk terlibat dalam Transaksi.
-Relasi menggambarkan bagaimana data antar entitas saling berhubungan.
-      </pre>
-      <a
-        href="https://youtu.be/ZHuEei0YU4Q?si=yQ9VkNSNtdQjrT3a"
-        class="btn"
-        target="_self"
-        >Cara install DBMS (Mysql)</a
-      >
+      <article class="post">
+        <p class="post-p"><b>Normaliasai ERD </b><br /></p>
+        <p>
+          Normalisasi pada ERD (Entity-Relationship Diagram) adalah proses
+          menyusun atau mengatur tabel dan atribut dalam database agar lebih
+          efisien, terstruktur, dan mengurangi redundansi data. Tujuannya adalah
+          membuat database menjadi konsisten, mudah di-maintain, dan menghindari
+          masalah update, insert, atau delete
+        </p>
+        <p><b>1. Tujuan Normaliasai</b></p>
+        <ol type="1">
+          <li>Menghilangkan duplikasi data yang tidak perlu</li>
+          <li>Memastikan setiap tabel memiliki satu topik utama</li>
+          <li>
+            Meminimalkan anomali data saat melakukan operasi CRUD (Create, Read,
+            Update, Delete).
+          </li>
+          <li>Membuat relasi antar tabel lebih jelas.</li>
+        </ol>
+        <p><b>2. Proses Normalisasi</b></p>
+        <p>
+          Normalisasi biasanya dilakukan secara bertingkat, disebut bentuk
+          normal (normal forms):
+          <ol type="1" class="list-2">
+            <li>1NF (First Normal Form)</li>
+            <ul>
+                <li>Semua kolom hanya menyimpan nilai atomik (tidak ada list atau array di satu kolom).</li>
+                <li>Setiap baris unik (biasanya dengan primary key)</li>
+            </ul>
+            <li>2NF (Second Normal Form)</li>
+            <ul>
+                <li>Setiap kolom non-primer harus bergantung sepenuhnya pada primary key, bukan sebagian dari composite key</li>
+            </ul>
+            <li>3NF (Third Normal Form)</li>
+            <ul>
+                <li>Tidak ada kolom non-primer yang bergantung pada kolom non-primer lain (menghindari dependency transitif)</li>
+            </ul>
+            <li>BCNF (Boyce-Codd Normal Form)</li>
+            <ul>
+                <li>Versi lebih ketat dari 3NF, memastikan setiap determinant adalah candidate key</li>
+            </ul>
+          </ol>
+        </p>
+        <a class="link" target="_blank" href="https://youtu.be/xBK7vIF_2Jw?si=K84JdDmqhwL087cC">Link Yotube</a>
+      </article>
     </main>
+    <footer>
+      <p>&copy; 2025 Blog ERD by Rendy</p>
+    </footer>
   </body>
 </html>
