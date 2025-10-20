@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog-Pertemuan-4</title>
+  </head>
+  <style>
+    body {
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(227, 225, 225);
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(58, 72, 227);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aliceblue;
+  font-size: 40px;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 100%;
+  margin: 0;
+}
+
+header p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+main {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.post {
+  background: rgba(255, 255, 255, 0.596);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+.post-p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: larger;
+}
+
+ul {
+  padding-left: 30px;
+}
+
+footer {
+  background-color: rgb(58, 72, 227);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+}
+
+.link {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.link:hover {
+  background-color: #be0303;
+}
+
+  </style>
+  <body>
+    <header>
+      <h1>Blog ERD</h1>
+      <p>Apa itu normalisasi pada ERD</p>
+    </header>
+    <main>
+      <article class="post">
+        <p class="post-p"><b>Normaliasai ERD </b><br /></p>
+        <p>
+          Normalisasi pada ERD (Entity-Relationship Diagram) adalah proses
+          menyusun atau mengatur tabel dan atribut dalam database agar lebih
+          efisien, terstruktur, dan mengurangi redundansi data. Tujuannya adalah
+          membuat database menjadi konsisten, mudah di-maintain, dan menghindari
+          masalah update, insert, atau delete
+        </p>
+        <p><b>1. Tujuan Normaliasai</b></p>
+        <ol type="1">
+          <li>Menghilangkan duplikasi data yang tidak perlu</li>
+          <li>Memastikan setiap tabel memiliki satu topik utama</li>
+          <li>
+            Meminimalkan anomali data saat melakukan operasi CRUD (Create, Read,
+            Update, Delete).
+          </li>
+          <li>Membuat relasi antar tabel lebih jelas.</li>
+        </ol>
+        <p><b>2. Proses Normalisasi</b></p>
+        <p>
+          Normalisasi biasanya dilakukan secara bertingkat, disebut bentuk
+          normal (normal forms):
+          <ol type="1" class="list-2">
+            <li>1NF (First Normal Form)</li>
+            <ul>
+                <li>Semua kolom hanya menyimpan nilai atomik (tidak ada list atau array di satu kolom).</li>
+                <li>Setiap baris unik (biasanya dengan primary key)</li>
+            </ul>
+            <li>2NF (Second Normal Form)</li>
+            <ul>
+                <li>Setiap kolom non-primer harus bergantung sepenuhnya pada primary key, bukan sebagian dari composite key</li>
+            </ul>
+            <li>3NF (Third Normal Form)</li>
+            <ul>
+                <li>Tidak ada kolom non-primer yang bergantung pada kolom non-primer lain (menghindari dependency transitif)</li>
+            </ul>
+            <li>BCNF (Boyce-Codd Normal Form)</li>
+            <ul>
+                <li>Versi lebih ketat dari 3NF, memastikan setiap determinant adalah candidate key</li>
+            </ul>
+          </ol>
+        </p>
+        <a class="link" target="_blank" href="https://youtu.be/xBK7vIF_2Jw?si=K84JdDmqhwL087cC">Link Yotube</a>
+      </article>
+    </main>
+    <footer>
+      <p>&copy; 2025 Blog ERD by Rendy</p>
+    </footer>
+  </body>
+</html>
